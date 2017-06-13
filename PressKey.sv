@@ -3,7 +3,7 @@ module PressKey (clk, reset, KeyR, KeyL, KeyD, KeyU, Keyout);
 	input logic KeyR, KeyL, KeyD, KeyU;
 	output logic [3:0] Keyout;
 	logic [1:0] ps, ns;
-	
+	logic psa;
 	parameter [1:0] LEFT = 2'b00, RIGHT = 2'b01, UP = 2'b10, DOWN = 2'b11;
 	//NOTE: opposite directions were not accounted for as states to prevent instant end of game
 	always_comb
